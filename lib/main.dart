@@ -12,26 +12,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Github Client',
-      home:  ,
+      home:  BuildInput(),
     );
   }
 }
 
-class _buildInput extends StatefulWidget {
-  const _buildInput({Key? key}) : super(key: key);
+class BuildInput extends StatefulWidget {
+  const BuildInput({Key? key}) : super(key: key);
 
   @override
-  _buildInputState createState() => _buildInputState();
+  _BuildInputState createState() => _BuildInputState();
 }
 
-class _buildInputState extends State<_buildInput> {
+class _BuildInputState extends State<BuildInput> {
   List<GithubRepository> _repositories = [];
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: EdgeInsets.all(16.0),
+        margin: const EdgeInsets.all(16.0),
         child: TextField(
           decoration: const InputDecoration(
               prefixIcon: Icon(Icons.search),
