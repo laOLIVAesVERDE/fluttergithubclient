@@ -9,7 +9,7 @@ class ApiClient {
   ApiClient._privateConstructor();
   static ApiClient get instance => _instance;
 
-  Future<List<GithubRepository>> _searchRepositories(String searchWord) async {
+  Future<List<GithubRepository>> searchRepositories(String searchWord) async {
     final response = await http.get('https://api.github.com/search/repositories?q=' + searchWord + '&sort=stars&order=desc');
     if (response.statusCode == 200) {
       List<GithubRepository> list = [];
