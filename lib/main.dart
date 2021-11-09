@@ -16,21 +16,21 @@ class MyApp extends StatelessWidget {
       title: 'Github Client',
       home:  Column(
         children: const [
-          BuildInput()
+          SearchGithubRepository()
         ],
       ),
     );
   }
 }
 
-class BuildInput extends StatefulWidget {
-  const BuildInput({Key? key}) : super(key: key);
+class SearchGithubRepository extends StatefulWidget {
+  const SearchGithubRepository({Key? key}) : super(key: key);
 
   @override
-  _BuildInputState createState() => _BuildInputState();
+  _SearchGithubRepositoryState createState() => _SearchGithubRepositoryState();
 }
 
-class _BuildInputState extends State<BuildInput> {
+class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
   List<GithubRepository> _repositories = [];
   @override
   Widget build(BuildContext context) {
