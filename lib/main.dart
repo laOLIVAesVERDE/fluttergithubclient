@@ -30,8 +30,13 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
   List<GithubRepository> _repositories = [];
   @override
   Widget build(BuildContext context) {
-    return Column(
-
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Github Client"),
+      ),
+      body: Column(
+        children: [_searchTextField()],
+      ),
     );
   }
 
