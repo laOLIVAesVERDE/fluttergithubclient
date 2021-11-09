@@ -10,7 +10,8 @@ class ApiClient {
   static ApiClient get instance => _instance;
 
   Future<List<GithubRepository>> searchRepositories(String searchWord) async {
-    final response = await http.get('https://api.github.com/search/repositories?q=' + searchWord + '&sort=stars&order=desc');
+    final uri = Uri.parse("https://api.github.com/search/repositories?q=" + searchWord + '&sort=stars&order=desc');
+    final response = await http.get(uri);
     if (response.statusCode == 200) {
       List<GithubRepository> list = [];
       Map<String, dynamic> decoded = json.decode(response.body);
