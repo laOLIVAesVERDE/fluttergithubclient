@@ -12,13 +12,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  const MaterialApp(
       title: 'Github Client',
-      home:  Column(
-        children: const [
-          SearchGithubRepository()
-        ],
-      ),
+      home:  SearchGithubRepository()
     );
   }
 }
@@ -34,6 +30,12 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
   List<GithubRepository> _repositories = [];
   @override
   Widget build(BuildContext context) {
+    return Column(
+
+    );
+  }
+
+  Widget _searchTextField() {
     return Container(
         margin: const EdgeInsets.all(16.0),
         child: TextField(
@@ -53,20 +55,6 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
           },
         )
     );
-  }
-}
-
-class RepositoryList extends StatefulWidget {
-  const RepositoryList({Key? key}) : super(key: key);
-
-  @override
-  _RepositoryListState createState() => _RepositoryListState();
-}
-
-class _RepositoryListState extends State<RepositoryList> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
 
