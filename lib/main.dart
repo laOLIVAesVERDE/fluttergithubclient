@@ -61,6 +61,26 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
         )
     );
   }
+
+  Widget _buildRepositoryItem(GithubRepository repository) {
+    return Card(
+      margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Text(
+              repository.fullName,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold, fontSize: 16.0
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
 }
 
 
