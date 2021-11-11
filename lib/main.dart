@@ -105,7 +105,18 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
                     color: Colors.grey
                 )
             ),
-          ) : Container()
+          ) : Container(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              const Icon(Icons.star),
+              SizedBox(
+                width: 50.0,
+                child: Text(repository.stargazersCount.toString()),
+              ),
+              const Icon(Icons.remove_red_eye)
+            ],
+          )
         ],
       ),
     );
