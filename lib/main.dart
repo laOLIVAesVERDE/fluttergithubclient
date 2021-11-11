@@ -62,6 +62,14 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
     );
   }
 
+  Widget _buildRepositoryItemList() {
+    return ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          final repository = _repositories[index];
+        }
+    );
+  }
+
   Widget _buildRepositoryItem(GithubRepository repository) {
     return Card(
       margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
