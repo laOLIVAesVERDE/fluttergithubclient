@@ -66,7 +66,9 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
     return ListView.builder(
         itemBuilder: (BuildContext context, int index) {
           final repository = _repositories[index];
-        }
+          return _buildRepositoryItem(repository);
+        },
+      itemCount: _repositories.length,
     );
   }
 
