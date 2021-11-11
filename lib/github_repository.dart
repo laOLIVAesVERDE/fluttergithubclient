@@ -1,7 +1,7 @@
 class GithubRepository {
   final String fullName;
-  final String description;
-  final String language;
+  final String? description;
+  final String? language;
   final String htmlUrl;
   final int stargazersCount;
   final int watchersCount;
