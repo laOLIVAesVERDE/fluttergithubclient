@@ -125,7 +125,8 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
                 child: Text(repository.forksCount.toString()),
               ),
             ],
-          )
+          ),
+          const SizedBox(height: 16.0)
         ],
       ),
     );
