@@ -114,7 +114,16 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
                 width: 50.0,
                 child: Text(repository.stargazersCount.toString()),
               ),
-              const Icon(Icons.remove_red_eye)
+              const Icon(Icons.remove_red_eye),
+              SizedBox(
+                width: 50.0,
+                child: Text(repository.watchersCount.toString()),
+              ),
+              const Text("Fork:"),
+              SizedBox(
+                width: 50.0,
+                child: Text(repository.forksCount.toString()),
+              ),
             ],
           )
         ],
