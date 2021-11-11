@@ -35,7 +35,12 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
         title: const Text("Github Client"),
       ),
       body: Column(
-        children: [_searchTextField(), _buildRepositoryItemList()],
+        children: [
+          _searchTextField(),
+          Flexible(
+              child: _buildRepositoryItemList()
+          )
+        ],
       ),
     );
   }
@@ -90,7 +95,7 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
           repository.language != null ? Padding(
             padding: const EdgeInsets.fromLTRB(12.0, 0.0, 12.0, 12.0),
             child: Text(
-              repository.language,
+              repository.language!,
               style: const TextStyle(
                 fontWeight: FontWeight.bold, fontSize: 12.0
               ),
@@ -99,7 +104,7 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
           repository.description != null ? Padding(
             padding: const EdgeInsets.fromLTRB(12.0, 0.0, 12.0, 12.0),
             child: Text(
-              repository.description,
+              repository.description!,
                 style: const TextStyle(
                     fontWeight: FontWeight.w200,
                     color: Colors.grey
