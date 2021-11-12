@@ -37,6 +37,7 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
       body: Column(
         children: [
           _searchTextField(),
+          // スクロールコンテナを表示するため
           Flexible(
               child: _buildRepositoryItemList()
           )
