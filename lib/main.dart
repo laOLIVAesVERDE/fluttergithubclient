@@ -32,7 +32,7 @@ class _SearchGithubRepositoryState extends State<SearchGithubRepository> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Github Client"),
+        title: const Text("Simple Github Client"),
       ),
       body: Column(
         children: [
